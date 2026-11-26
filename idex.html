@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wambua Nicole | Ethical Hacker & AI Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Live Animated Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">WN<span class="accent">.</span></div>
+        
+        <div class="nav-controls">
+            <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#find-me">Find Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="status-badge">Available for Opportunities</div>
+            <h1>Hi, I'm <br><span class="gradient-text">Wambua Nicole</span></h1>
+            <p class="subtitle">Aspiring IT Professional | Ethical Hacking & Generative AI Enthusiast</p>
+            <p class="bio-short">Passionate about securing digital landscapes and building intelligent systems. Currently pursuing a Diploma in ICT at MKU.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-btn primary">View My Work</a>
+                <a href="#find-me" class="cta-btn secondary">Find Me</a>
+            </div>
+            
+            <!-- Social Media Links - With Logos & Dancing Effect -->
+            <div class="social-links">
+                <a href="https://twitter.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter / X">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon" title="TikTok">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/254790652419" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="https://t.me/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon" title="Telegram">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-frame">
+                <div class="profile-placeholder">
+                    <img src="profile.png" alt="Wambua Nicole Profile Picture" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="initials" style="display:none;">WN</span>
+                </div>
+                <div class="frame-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="content-grid">
+            <div class="about-text">
+                <p>I am an aspiring IT professional currently pursuing my studies at a TVET college. I have a strong interest in <strong>computer networking</strong>, <strong>computer maintenance</strong>, and <strong>cybersecurity</strong>.</p>
+                <p>My passion lies in <strong>Ethical Hacking</strong> and <strong>Generative AI</strong>. I am dedicated to understanding how systems can be secured from vulnerabilities and how AI can be leveraged to create innovative solutions. I am continuously developing my skills to become a competent, forward-thinking IT professional.</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">2028</span>
+                        <span class="stat-label">Expected Grad</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Core Skills</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="code-graphic">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-title">status.py</span>
+                </div>
+                <pre><code>
+<span class="keyword">class</span> <span class="class-name">ITProfessional</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.name = <span class="string">"Wambua Nicole"</span>
+        self.focus = [<span class="string">"Ethical Hacking"</span>, <span class="string">"Gen AI"</span>]
+        self.status = <span class="string">"Learning & Building"</span>
+    
+    <span class="keyword">def</span> <span class="function">get_goal</span>(self):
+        <span class="keyword">return</span> <span class="string">"Secure & Innovate"</span>
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Dashboard Section -->
+    <section id="dashboard">
+        <h2 class="section-title">Live Dashboard</h2>
+        <div class="dashboard-grid">
+            <div class="widget clock-widget">
+                <h3>Local Time</h3>
+                <div id="live-clock" class="digital-clock">00:00:00</div>
+                <div id="live-date" class="digital-date">Loading...</div>
+                <div class="timezone">Nairobi, Kenya (EAT)</div>
+            </div>
+
+            <div class="widget calendar-widget">
+                <div class="calendar-header">
+                    <span id="cal-month-year">Month Year</span>
+                </div>
+                <div class="calendar-grid" id="calendar-days"></div>
+            </div>
+
+            <div class="widget status-widget">
+                <h3>System Status</h3>
+                <div class="status-item">
+                    <span class="status-label">Network Uptime</span>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 99.8%;"></div></div>
+                    <span class="status-value">99.8%</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Security Scan</span>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 100%; background: #00ff88;"></div></div>
+                    <span class="status-value">Secure</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">AI Model Load</span>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 45%;"></div></div>
+                    <span class="status-value">45%</span>
+                </div>
+            </div>
+
+            <div class="widget stats-widget">
+                <h3>Quick Stats</h3>
+                <div class="mini-stat">
+                    <span class="mini-value" id="uptime-counter">0</span>
+                    <span class="mini-label">Days Coding</span>
+                </div>
+                <div class="mini-stat">
+                    <span class="mini-value">24/7</span>
+                    <span class="mini-label">Learning Mode</span>
+                </div>
+                <div class="mini-stat">
+                    <span class="mini-value">100%</span>
+                    <span class="mini-label">Dedication</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience Section -->
+    <section id="education">
+        <h2 class="section-title">Education & Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="date">2024 – Expected 2028</span>
+                    <h3>Diploma in ICT</h3>
+                    <h4>MKU (Mount Kenya University)</h4>
+                    <p>Majoring in <strong>Ethical Hacking</strong> and <strong>Generative AI</strong>. Gaining deep knowledge in network security, penetration testing, vulnerability assessment, and AI model deployment.</p>
+                    <div class="tags">
+                        <span>Ethical Hacking</span>
+                        <span>Generative AI</span>
+                        <span>Networking</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="date">Completed</span>
+                    <h3>KCSE</h3>
+                    <h4>Kenya Certificate of Secondary Education</h4>
+                    <p>Completed secondary education with a focus on sciences and mathematics, laying the foundation for a career in technology.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="date">Ongoing</span>
+                    <h3>Practical Experience</h3>
+                    <h4>Self-Directed Learning & Projects</h4>
+                    <p>Developing hands-on skills in computer maintenance, software installation, network configuration, troubleshooting, and basic cybersecurity. Actively building projects in AI and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Services Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills & Services</h2>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Primary Skills</h3>
+                <ul>
+                    <li>Computer Hardware & Software Maintenance</li>
+                    <li>Computer Networking & Configuration</li>
+                    <li>Network Troubleshooting & Testing</li>
+                    <li>Software Installation & Configuration</li>
+                    <li>Basic Cybersecurity Knowledge</li>
+                    <li>Ethical Hacking Fundamentals</li>
+                    <li>Generative AI Concepts</li>
+                    <li>Technical Documentation & Reporting</li>
+                    <li>Problem-Solving & Teamwork</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3>Services Offered</h3>
+                <ul>
+                    <li>Computer Troubleshooting & Maintenance</li>
+                    <li>Software Installation & Configuration</li>
+                    <li>Basic Network Setup & Troubleshooting</li>
+                    <li>Computer Hardware Support</li>
+                    <li>Basic Website Design & Development</li>
+                    <li>Security Audits & Vulnerability Checks (Basic)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Major Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.png" alt="AI Chatbot Assistant" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <span class="img-fallback">AI</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags"><span>Python</span><span>Gen AI</span></div>
+                    <h3>AI Chatbot Assistant</h3>
+                    <p>Developed a generative AI-powered chatbot capable of answering IT support queries. Implemented using Python and integrated with an LLM API for natural language processing.</p>
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.png" alt="Network Vulnerability Scanner" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <span class="img-fallback">SEC</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags"><span>Security</span><span>Networking</span></div>
+                    <h3>Network Vulnerability Scanner</h3>
+                    <p>Created a basic network scanner to identify open ports and potential vulnerabilities in a local network. Focused on ethical hacking principles and reporting.</p>
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project3.png" alt="Network Design & Simulation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <span class="img-fallback">NET</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags"><span>Cisco</span><span>Topology</span></div>
+                    <h3>Network Design & Simulation</h3>
+                    <p>Designed and simulated a secure enterprise network topology using Cisco Packet Tracer, including VLANs, routing protocols, and firewall configurations.</p>
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project4.png" alt="Secure Portfolio Website" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <span class="img-fallback">WEB</span>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags"><span>HTML/CSS</span><span>JS</span></div>
+                    <h3>Secure Portfolio Website</h3>
+                    <p>Built a responsive, dark-themed portfolio website to showcase skills and projects. Implemented security best practices for web forms and data handling.</p>
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Me Section -->
+    <section id="find-me">
+        <h2 class="section-title">Find Me / Connect</h2>
+        <div class="find-me-container">
+            <div class="find-me-text">
+                <h3>Let's Collaborate</h3>
+                <p>If you are looking for a dedicated IT professional for an internship, project, or collaboration, please fill out the form. I will get back to you as soon as possible.</p>
+                <div class="find-me-details">
+                    <div class="find-detail-item"><span>📍</span> Nairobi, Kenya</div>
+                    <div class="find-detail-item"><span>📧</span> wambuanicole835@gmail.com</div>
+                    <div class="find-detail-item"><span>📞</span> 0790652419</div>
+                </div>
+                
+                <div class="find-me-socials">
+                    <h4>Connect on Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://twitter.com/@Youngcoop31218" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@itsva_lour" target="_blank" rel="noopener noreferrer" class="social-icon" title="TikTok">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/_i_am_carson" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/254790652419" target="_blank" rel="noopener noreferrer" class="social-icon" title="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Telegram">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <form class="find-me-form" id="findMeForm">
+                <input type="text" id="finderName" placeholder="Your Full Name" required>
+                <input type="email" id="finderEmail" placeholder="Your Email Address" required>
+                <input type="text" id="finderCompany" placeholder="Company / Organization (Optional)">
+                <select id="finderPurpose" required>
+                    <option value="" disabled selected>Purpose of Contact</option>
+                    <option value="internship">Internship Opportunity</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="collaboration">Project Collaboration</option>
+                    <option value="mentorship">Mentorship</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea id="finderMessage" placeholder="Brief message about your inquiry..." required></textarea>
+                <button type="submit" class="cta-btn primary">Send Request</button>
+                <div id="find-me-status"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p class="contact-desc">I'm always open to discussing new projects, creative ideas, or opportunities in the IT and cybersecurity space.</p>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div><span class="contact-label">Email</span><a href="mailto:wambuanicole835@gmail.com">wambuanicole835@gmail.com</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div><span class="contact-label">Phone</span><a href="tel:0790652419">0790652419</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div><span class="contact-label">Location</span><span>Nairobi, Kenya</span></div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-btn primary">Send Message</button>
+                <div id="form-status"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">WN<span class="accent">.</span></div>
+            <p>&copy; 2026 Wambua Nicole. All rights reserved.</p>
+            <p class="footer-sub">Built with passion for IT, Security & AI.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
